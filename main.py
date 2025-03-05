@@ -68,7 +68,6 @@ def search_website(user_query: str) -> List[Dict]:
     # Extract and display results
 
     for i, result in enumerate(results.get("organic_results", [])):
-        # print(f"{result['link']}")
         
         if '%' in result['link']:
             webpage = requests.get(result['link'], headers=HEADERS)
@@ -102,7 +101,6 @@ def search_website(user_query: str) -> List[Dict]:
                 d['return_policy'] = get_return_policy(new_soup)
                 
                 scraped_result.append(d)
-                print(scraped_result[i])
                 if len(scraped_result) > 20:
                     break
             
@@ -126,7 +124,6 @@ def search_website(user_query: str) -> List[Dict]:
             
             scraped_result.append(d)
             
-            # print(scraped_result[i])
             if len(scraped_result) > 20:
                 break
     
