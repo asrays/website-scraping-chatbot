@@ -175,4 +175,4 @@ while True:
     assistant_response = response["messages"][-1].content
     
     # Display the assistant's response
-    print(f"Bot: {assistant_response}")
+    print(f"\nBot: {assistant_response} \n")
